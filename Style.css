@@ -1,0 +1,131 @@
+
+body {
+    margin: 0;
+    background-color: #f2f2f0;
+    font-family: Arial;
+    color: #172b2a;
+}
+
+header {
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #172b2a;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+    gap: 30px;
+}
+
+.apresentacao {
+    width: 50%;
+}
+
+.apresentacao h1 {
+    font-size: 38px;
+}
+
+.apresentacao p {
+    line-height: 1.5;
+}
+
+.botao {
+    background-color: #d6a32a;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#cadastro {
+    background-color: white;
+    border: 1px solid #172b2a;
+}
+
+.ficha {
+    background-color: white;
+    padding: 25px;
+    width: 40%;
+}
+
+.ficha p {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#sobre {
+    background-color: white;
+    padding: 30px;
+}
+
+.destaque {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.destaque img {
+    width: 300px;
+}
+
+
+.produtos {
+    text-align: center;
+    padding: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 280px;
+    min-height: 180px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#lista-produtos {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.preco-antigo {
+    color: red;
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    color: green;
+    font-size: 30px;
+}
+
+#entrar {
+    background-color: #174b43;
+    color: white;
+    padding: 10px 20px;
+}
