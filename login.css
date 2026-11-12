@@ -1,0 +1,261 @@
+:root {
+    --verde-pcb: #0E5A47;
+    --verde-escuro: #08382C;
+    --ouro: #E0AE2E;
+    --tinta: #0C1F19;
+    --texto-secundario: #4B5F57;
+    --fundo: #F1F4F1;
+    --superficie: #FFFFFF;
+    --verde-claro: #DDE9E3;
+    --linha: #CBD6D0;
+    --perigo: #B3261E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "IBM Plex Sans", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    color: var(--tinta);
+    background-color: var(--fundo);
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.painel-marca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 56px;
+    background-color: var(--verde-escuro);
+    color: var(--superficie);
+}
+
+.painel-marca h1 {
+    margin: 0 0 20px 0;
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.painel-marca p {
+    margin: 0;
+    max-width: 420px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chip {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--ouro);
+    border-radius: 4px;
+    background-color: var(--verde-pcb);
+}
+
+.chip::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background-color: var(--ouro);
+}
+
+.painel-marca .logo-nome {
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.painel-marca .logo-sub {
+    margin-top: 2px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--linha);
+}
+
+.botao-voltar {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid var(--ouro);
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--ouro);
+    text-decoration: none;
+}
+
+.botao-voltar:hover {
+    background-color: var(--ouro);
+    color: var(--tinta);
+}
+
+.painel-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    background-color: var(--fundo);
+}
+
+.cartao {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px;
+    background-color: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 4px;
+}
+
+.abas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.aba {
+    flex: 1;
+    height: 44px;
+    border: 1px solid var(--tinta);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aba-ativa {
+    background-color: #0C1F19;
+    color: #FFFFFF;
+}
+
+.aba-inativa {
+    background-color: #FFFFFF;
+    color: #0C1F19;
+}
+.cartao h2 {
+    margin: 0 0 20px 0;
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#form-cadastro {
+    display: none;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid var(--texto-secundario);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--tinta);
+    background-color: var(--superficie);
+}
+
+.campo input::placeholder {
+    color: var(--linha);
+}
+
+.campo input:focus {
+    border-color: var(--verde-pcb);
+    outline: 2px solid var(--verde-pcb);
+}
+
+.erro {
+    margin: 6px 0 0 0;
+    font-size: 13px;
+    color: var(--perigo);
+}
+
+.botao-primario {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--superficie);
+    background-color: var(--verde-pcb);
+    cursor: pointer;
+}
+
+.botao-primario:hover {
+    background-color: var(--verde-escuro);
+}
+
+.mensagem-sucesso {
+    display: none;
+    margin: 16px 0 0 0;
+    padding: 12px 14px;
+    border-radius: 4px;
+    background-color: var(--verde-claro);
+    line-height: 1.5;
+}
+
+.mensagem-sucesso a {
+    font-weight: 600;
+    color: var(--verde-pcb);
+}
+
+@media screen and (max-width: 800px) {
+    .pagina {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-marca {
+        gap: 32px;
+        padding: 32px 24px;
+    }
+
+    .painel-marca h1 {
+        font-size: 36px;
+    }
+
+    .painel-form {
+        padding: 24px 16px;
+    }
+
+    .cartao {
+        padding: 24px 20px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar - Núcleo Hardware</title>
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|IBM+Plex+Sans:400,500,600" rel="stylesheet">
+<link href="login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   
+<div class="pagina">
+
+    <section class="painel-marca">
+        <div class="logo">
+            <div class="chip"></div>
+            <div>
+                <p class="logo-nome">Núcleo</p>
+                <p class="logo-sub">Hardware</p>
+            </div>
+        </div>
+
+        <div>
+            <h1>Entre para guardar sua lista de peças.</h1>
+            <p>Com a conta você salva seus dados neste navegador e acessa o painel de produtos da loja.</p>
+        </div>
+
+        <a class="botao-voltar" href="index.html">Voltar para a loja</a>
+    </section>
+
+    <section class="painel-form">
+        <div class="cartao">
+
+            <div class="abas">
+                <button type="button" class="aba aba-ativa" id="aba-entrar">Entrar</button>
+                <button type="button" class="aba aba-inativa" id="aba-cadastro">Criar conta</button>
+            </div>
+
+            <h2 id="titulo-form">Entrar</h2>
+
+            <form id="form-entrar">
+                <div class="campo">
+                    <label for="email-entrar">E-mail</label>
+                    <input type="email" id="email-entrar" placeholder="voce@exemplo.com">
+                    <p class="erro" id="erro-email-entrar"></p>
+                </div>
+                <div class="campo">
+                    <label for="senha-entrar">Senha</label>
+                    <input type="password" id="senha-entrar">
+                    <p class="erro" id="erro-senha-entrar"></p>
+                </div>
+                <input type="submit" class="botao-primario" value="Entrar">
+            </form>
+
+            <form id="form-cadastro">
+                <div class="campo">
+                    <label for="email-cadastro">E-mail</label>
+                    <input type="email" id="email-cadastro" placeholder="voce@exemplo.com">
+                    <p class="erro" id="erro-email-cadastro"></p>
+                </div>
+                <div class="campo">
+                    <label for="senha-cadastro">Senha</label>
+                    <input type="password" id="senha-cadastro">
+                    <p class="erro" id="erro-senha-cadastro"></p>
+                </div>
+                <div class="campo">
+                    <label for="confirma-cadastro">Confirmar senha</label>
+                    <input type="password" id="confirma-cadastro">
+                    <p class="erro" id="erro-confirma-cadastro"></p>
+                </div>
+                <input type="submit" class="botao-primario" value="Criar conta">
+            </form>
+
+             <p class="mensagem-sucesso" id="mensagem-sucesso"></p>
+
+        </div>
+    </section>
+
+</div>
+ <script src="login.js"></script>
+</body>
+</html>
