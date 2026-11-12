@@ -1,12 +1,4 @@
 
-import {
-    buscarUsuarios,
-    salvarUsuarios,
-    buscarAdmin,
-    inicializarAdmin,
-    salvarUsuarioLogado
-} from "./localStorage.js";
-
 
 const abaEntrar = document.getElementById("aba-entrar");
 const abaCadastro = document.getElementById("aba-cadastro");
@@ -17,12 +9,8 @@ const formCadastro = document.getElementById("form-cadastro");
 const tituloForm = document.getElementById("titulo-form");
 const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
-
-// Inicializar administrador
 inicializarAdmin();
 
-
-// Alternar para a aba Entrar
 abaEntrar.addEventListener("click", function () {
 
     formEntrar.style.display = "block";
@@ -40,8 +28,6 @@ abaEntrar.addEventListener("click", function () {
 
 });
 
-
-// Alternar para a aba Cadastro
 abaCadastro.addEventListener("click", function () {
 
     formEntrar.style.display = "none";
@@ -59,8 +45,6 @@ abaCadastro.addEventListener("click", function () {
 
 });
 
-
-// Cadastro de usuário
 formCadastro.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -166,8 +150,6 @@ formCadastro.addEventListener("submit", function (event) {
 
 });
 
-
-// Login de usuário
 formEntrar.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -208,7 +190,7 @@ formEntrar.addEventListener("submit", function (event) {
                 tipo: "administrador"
             });
 
-            window.location.href = "produtos.html";
+            window.location.href = "crud.html";
             return;
         }
 
@@ -250,52 +232,28 @@ formEntrar.addEventListener("submit", function (event) {
 
 });
 
-  //LOCALSTORAGE COLOCAR NA OUTRA PAGINA
- // Buscar usuários cadastrados
-export function buscarUsuarios() {
-
+function buscarUsuarios() {
     return JSON.parse(localStorage.getItem("nucleo_usuarios")) || [];
-
 }
 
-
-// Salvar usuários cadastrados
-export function salvarUsuarios(usuarios) {
-
+function salvarUsuarios(usuarios) {
     localStorage.setItem("nucleo_usuarios", JSON.stringify(usuarios));
-
 }
 
-
-// Buscar administrador
-export function buscarAdmin() {
-
+function buscarAdmin() {
     return JSON.parse(localStorage.getItem("nucleo_admin"));
-
 }
 
-
-// Inicializar administrador padrão
-export function inicializarAdmin() {
-
+function inicializarAdmin() {
     const administrador = {
         email: "admin@123.com",
         senha: "123456",
         tipo: "administrador"
     };
 
-    if (!localStorage.getItem("nucleo_admin")) {
-
-        localStorage.setItem("nucleo_admin", JSON.stringify(administrador));
-
-    }
-
+    localStorage.setItem("nucleo_admin", JSON.stringify(administrador));
 }
 
-
-// Salvar usuário logado
-export function salvarUsuarioLogado(usuario) {
-
+function salvarUsuarioLogado(usuario) {
     localStorage.setItem("nucleo_usuario_logado", JSON.stringify(usuario));
-
 }
