@@ -1,0 +1,366 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f3f1;
+    font-family: Arial, sans-serif;
+    color: #10251f;
+    font-family: "IBM Plex Sans", Arial, Verdana, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.layout-carrinho {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 277px;
+    gap: 25px;
+    align-items: start;
+    width: 100%;
+}
+
+.carrinho {
+    width: 100%;
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #d4ded9;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.produto {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr) auto 90px;
+    grid-template-rows: 54px 33px;
+    align-items: center;
+    column-gap: 18px;
+    row-gap: 12px;
+    padding: 15px 18px;
+    border-bottom: 1px solid #d4ded9;
+}
+
+.produto:last-child {
+    border-bottom: none;
+}
+
+.imagem {
+    width: 54px;
+    height: 54px;
+    background-color: #dce9e3;
+    color: #12604e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.descricao {
+    min-width: 0;
+}
+
+.descricao span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #60736c;
+}
+
+.descricao h3 {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.descricao p {
+    font-size: 10px;
+    color: #60736c;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantidade button {
+    width: 34px;
+    height: 34px;
+    background: white;
+    border: 1px solid #344b43;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantidade strong {
+    font-size: 12px;
+}
+
+.preco {
+    width: 90px;
+    text-align: right;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.remover {
+    grid-column: 1;
+    grid-row: 2;
+    background: white;
+    border: 1px solid #e74c4c;
+    color: #d92727;
+    padding: 9px 12px;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+    width: max-content;
+}
+
+/* RESUMO */
+
+.resumo {
+    width: 277px;
+    background-color: white;
+    border: 1px solid #d4ded9;
+    border-radius: 3px;
+    padding: 18px;
+}
+
+.resumo h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #d4ded9;
+    font-size: 12px;
+}
+
+.linha span:first-child {
+    color: #60736c;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #263d34;
+    padding: 12px 0 15px;
+    font-size: 13px;
+}
+
+.total strong:last-child {
+    font-size: 18px;
+}
+
+.resumo button {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.finalizar {
+    background: #e9b329;
+    border: none;
+    color: #10251f;
+}
+
+.continuar {
+    background: white;
+    border: 2px solid #263d34;
+    color: #10251f;
+}
+
+.esvaziar {
+    background: white;
+    border: 1px solid #e74c4c;
+    color: #d92727;
+    margin-bottom: 0 !important;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+
+    .layout-carrinho {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .produto {
+        grid-template-columns: 45px minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 12px;
+    }
+
+    .imagem {
+        width: 45px;
+        height: 45px;
+    }
+
+    .quantidade {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .preco {
+        grid-column: 2;
+        grid-row: 3;
+        text-align: left;
+    }
+
+    .remover {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+/* ===== MENU ===== */
+
+.menu {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cbd6d0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Linha interna: logo | links | ações. Quebra em várias linhas no celular */
+.menu-interno {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+}
+
+/* ----- Logo ----- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #0c1f19;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 3px;
+}
+
+.logo-nome {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.logo-sub {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #4b5f57;
+}
+
+/* ----- Links ----- */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+}
+
+.menu-links a {
+    color: #0c1f19;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover,
+.menu-links a[aria-current="page"] {
+    color: #0e5a47;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+/* ----- Carrinho e botão Entrar ----- */
+.menu-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+}
+
+.menu-carrinho {
+    display: inline-block;
+    padding: 13px 0;
+    font-size: 14px;
+    color: #0c1f19;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.menu-carrinho:hover {
+    color: #0e5a47;
+}
+
+.menu-entrar {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 20px;
+    background-color: #0e5a47;
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.menu-entrar:hover {
+    background-color: #08382c;
+}
+
+/* Foco visível para quem navega pelo teclado */
+.menu a:focus-visible {
+    outline: 3px solid #0c1f19;
+    outline-offset: 2px;
+}
