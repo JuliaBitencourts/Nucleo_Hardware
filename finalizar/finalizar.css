@@ -93,7 +93,7 @@ body {
     max-width: 420px;
 }
 
-#numeroPedido, #numeroPedido2 {
+#numeroPedido {
     border: 2px solid #e0ae2e;
     width: 300px;
     height: 90px;

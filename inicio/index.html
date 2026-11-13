@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">    <title>Núcleo Hardware</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|IBM+Plex+Sans:400,500,600" rel="stylesheet">
+</head>
+<body>
+
+<header class="menu">
+        <div class="menu-interno">
+
+            <a href="index.html" class="logo" aria-label="Núcleo Hardware, início">
+                <img src="../assets/img/Carrinho-selection.png" alt="" width="36" height="36">
+                <span class="logo-texto">
+                    <span class="logo-nome">Núcleo</span>
+                    <span class="logo-sub">Hardware</span>
+                </span>
+            </a>
+
+            <nav class="menu-links" aria-label="Principal">
+                <a href="index.html" aria-current="page">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <div class="menu-acoes">
+                <a href="../carrinho/carrinho.html" class="menu-carrinho">Carrinho: <strong id="menuQtd">0</strong> · <span id="menuTotal">R$ 0,00</span></a>
+                 <a href="../login/login.html" id="entrar">Entrar</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main id="inicio">
+
+        <div class="apresentacao">
+            <p>COMPONENTES PARA PC</p>
+
+            <h1>MONTE O PC DOS SEUS SONHOS.</h1>
+
+            <p>
+                A Núcleo é uma loja de componentes para computador.
+                Aqui você encontra os melhores processadores, placas de vídeo,
+                memórias e muito mais.
+            </p>
+
+            <a href="#produtos" class="botao">Ver produtos</a>
+
+            <a href="../login/login.html#form-cadastro" class="botao">Criar conta</a>
+        </div>
+
+        <div class="ficha">
+
+        <h3>DESTAQUE DA LOJA</h3>
+
+        <h2>Processador Ryzen 5 5600</h2>
+        <p>Modelo: Ryzen 5 5600</p>
+        <p>Soquete: AM4</p>
+        <p>Núcleos: 6 / 12</p>
+        <p class="preco-antigo">De: R$ 970,90</p>
+        <p class="preco-atual">Por: R$ 899,99</p>
+
+</div>
+
+    </main>
+
+
+
+ 
+<div class="produtos" id="produtos">
+
+    <h2>PRODUTOS</h2>
+
+    <div id="lista-produtos"></div>
+
+    </div>
+    
+    <div class="sobreGeral">
+    <h1 id="sobre">SOBRE A NÚCLEO</h1>
+
+    <p id="mensagemSobre">
+        Somos uma loja de componentes de computador. Aqui você <br> encontra peças para montar um PC do zero ou trocar a que<br> está limitando o seu.
+    </p>
+    </div>
+
+
+    <script src="../js/localStorage.js"></script>
+    <script src="inicio.js"></script>
+
+</body>
+</html>

@@ -4,22 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Painel de Produtos - Núcleo Hardware</title>
-  <link rel="stylesheet" href="crud.css">
-  
+  <link rel="stylesheet" href="painel.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|IBM+Plex+Sans:400,500,600" rel="stylesheet">
 </head>
 
 <body>
 
   <!--CABEÇALHO-->
-  <header>
-    <p>NÚCLEO HARDWARE</p>
-    <div class="menu">
-      <a href="#">Início</a>
-      <a href="#">Produtos</a>
-      <a href="#" class="ativo">Painel</a>
-      <button>Sair</button>
-    </div>
-  </header>
+  <header class="menu">
+        <div class="menu-interno">
+
+            <a href="../inicio/index.html" class="logo" aria-label="Núcleo Hardware, início">
+                <img src="../assets/img/Carrinho-selection.png" alt="" width="36" height="36">
+                <span class="logo-texto">
+                    <span class="logo-nome">Núcleo</span>
+                    <span class="logo-sub">Hardware</span>
+                </span>
+            </a>
+
+            <nav class="menu-links" aria-label="Principal">
+                <a href="../inicio/index.html">Início</a>
+                <a href="../inicio/index.html#produtos">Produtos</a>
+                <a href="../inicio/index.html#sobre">Sobre</a>
+            </nav>
+
+            <div class="menu-acoes">
+                 <a href="../login/login.html" id="sair">Sair</a>
+            </div>
+
+        </div>
+    </header>
 
   <!--CONTEÚDO-->
   <main>
@@ -95,7 +109,8 @@
     </div>
   </main>
 
-  <script src="crud.js" defer></script>
+  <script src="../js/localStorage.js" defer></script>
+  <script src="painel.js" defer></script>
 
 </body>
 

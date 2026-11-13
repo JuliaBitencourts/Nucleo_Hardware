@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|IBM+Plex+Sans:400,500,600" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="menu">
+        <div class="menu-interno">
+
+            <a href="../inicio/index.html" class="logo" aria-label="Núcleo Hardware, início">
+                <img src="../assets/img/Carrinho-selection.png" alt="" width="36" height="36">
+                <span class="logo-texto">
+                    <span class="logo-nome">Núcleo</span>
+                    <span class="logo-sub">Hardware</span>
+                </span>
+            </a>
+
+            <nav class="menu-links" aria-label="Principal">
+                <a href="../inicio/index.html">Início</a>
+                <a href="../inicio/index.html#produtos">Produtos</a>
+                <a href="../inicio/index.html#sobre">Sobre</a>
+            </nav>
+
+            <div class="menu-acoes">
+                <a href="carrinho.html" class="menu-carrinho">Carrinho: <strong id="menuQtd">0</strong> · <span id="menuTotal">R$ 0,00</span></a>
+                <a href="../login/login.html" class="menu-entrar">Entrar</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>SEU CARRINHO</h1>
+
+        <div class="layout-carrinho">
+
+            <!-- LISTA DE PRODUTOS (preenchida pelo carrinho.js a partir do localStorage) -->
+            <section class="carrinho" id="carrinho"></section>
+
+            <!-- RESUMO DO CARRINHO -->
+            <aside class="resumo">
+
+                <h2>RESUMO</h2>
+
+                <div class="linha">
+                    <span>Itens</span>
+                    <span id="total-itens">0</span>
+                </div>
+
+                <div class="linha subtotal">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 00,00</span>
+                </div>
+
+                <div class="total">
+                    <strong>Total</strong>
+                    <strong id="total">R$ 00,00</strong>
+                </div>
+
+                <button class="finalizar">
+                    Finalizar compra
+                </button>
+
+                <button class="continuar">
+                    Continuar comprando
+                </button>
+
+                <button class="esvaziar">
+                    Esvaziar carrinho
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <script src="../js/localStorage.js"></script>
+    <script src="carrinho.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+body {
+    margin: 0;
+    background-color: #f2f2f0;
+    font-family: Arial;
+    color: #172b2a;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #172b2a;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+    gap: 30px;
+}
+
+.apresentacao {
+    width: 50%;
+}
+
+.apresentacao h1 {
+    font-size: 38px;
+}
+
+.apresentacao p {
+    line-height: 1.5;
+}
+
+.botao {
+    background-color: #d6a32a;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#cadastro {
+    background-color: white;
+    border: 1px solid #172b2a;
+}
+
+.ficha {
+    background-color: white;
+    padding: 25px;
+    width: 40%;
+}
+
+.ficha p {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.sobreGeral {
+    background-color: #ffffff;
+    padding: 56px 24px;
+    border-top: 1px solid #e3e8e5;
+    text-align: center;
+}
+
+#sobre {
+    margin: 0 0 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0e5a47;
+}
+
+#sobre::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin: 14px auto 0;
+    background-color: #0e5a47;
+    border-radius: 2px;
+}
+
+#mensagemSobre {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4b5f57;
+}
+
+.produtos {
+    text-align: center;
+    padding: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 280px;
+    min-height: 180px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#lista-produtos {
+    display: contents;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.preco-antigo {
+    color: red;
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    color: green;
+    font-size: 30px;
+}
+
+#entrar {
+    background-color: #174b43;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+/* ===== MENU ===== */
+
+.menu {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cbd6d0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Linha interna: logo | links | ações. Quebra em várias linhas no celular */
+.menu-interno {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+}
+
+/* ----- Logo ----- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #0c1f19;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 3px;
+}
+
+.logo-nome {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.logo-sub {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #4b5f57;
+}
+
+/* ----- Links ----- */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+}
+
+.menu-links a {
+    color: #0c1f19;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover,
+.menu-links a[aria-current="page"] {
+    color: #0e5a47;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+/* ----- Carrinho e botão Entrar ----- */
+.menu-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+}
+
+.menu-carrinho {
+    display: inline-block;
+    padding: 13px 0;
+    font-size: 14px;
+    color: #0c1f19;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.menu-carrinho:hover {
+    color: #0e5a47;
+}
+
+.menu-entrar {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 20px;
+    background-color: #0e5a47;
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.menu-entrar:hover {
+    background-color: #08382c;
+}
+
+/* Foco visível para quem navega pelo teclado */
+.menu a:focus-visible {
+    outline: 3px solid #0c1f19;
+    outline-offset: 2px;
+}
